@@ -27,16 +27,16 @@ html, body {
   filter: brightness(95%) contrast(110%) saturate(105%);
 }
 
-/* Subtle atmospheric overlay */
+/* Atmospheric overlay */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(5,10,20,0.25);
+  background: rgba(5,10,20,0.28);
   z-index: 2;
   pointer-events: none;
 }
 
-/* Layout container */
+/* Layout */
 .content {
   position: relative;
   z-index: 3;
@@ -57,7 +57,7 @@ html, body {
   filter: drop-shadow(0 12px 30px rgba(0,0,0,0.6));
   opacity: 0;
   transform: translateY(8px);
-  animation: fadeInLogo 2.8s ease 0.4s forwards;
+  animation: fadeInLogo 2.6s ease 0.4s forwards;
 }
 
 @keyframes fadeInLogo {
@@ -67,24 +67,11 @@ html, body {
   }
 }
 
-/* Brand name */
-.brand {
-  margin-top: 24px;
-  font-size: 18px;
-  letter-spacing: 4px;
-  opacity: 0;
-  animation: fadeInText 2.5s ease 1.2s forwards;
-}
-
-@keyframes fadeInText {
-  to { opacity: 1; }
-}
-
 /* Email */
 .contact {
-  margin-top: 32px;
+  margin-top: 40px;
   font-size: 13px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.6px;
   opacity: 0.8;
 }
 
@@ -98,11 +85,11 @@ html, body {
   opacity: 0.6;
 }
 
-/* Reduced motion support */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   #bg-video { display: none; }
   .overlay { background: #000; }
-  .logo, .brand {
+  .logo {
     animation: none;
     opacity: 1;
     transform: none;
@@ -126,10 +113,9 @@ html, body {
 
 <main class="content">
   <img class="logo" src="woodlark.png" alt="Woodlark Associates Logo" />
-  <div class="brand">WOODLARK</div>
   <div class="contact">
-    <a href="mailto:hello@woodlarkassociates.co.uk">
-      hello@woodlarkassociates.co.uk
+    <a href="mailto:richard@woodlarkassociates.co.uk">
+      richard@woodlarkassociates.co.uk
     </a>
   </div>
 </main>
